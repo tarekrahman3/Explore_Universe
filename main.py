@@ -20,7 +20,7 @@ class DataViewer():
         starpreview = {}
         for star in stars:
             starpreview.update({i : star})
-            i=i+1
+            i+=1
         print("\n".join("{}\t{}".format(key, value) for key, value in starpreview.items()))
         return starpreview
 
@@ -30,7 +30,7 @@ class DataViewer():
         n = 0
         for vehicle in vehicles:
             vehiclepreview.update({n : vehicle})
-            n=n+1
+            n+=1
         print("\n".join("{}\t{}".format(key, value) for key, value in vehiclepreview .items()))
         return vehiclepreview
 
@@ -42,7 +42,7 @@ def take_user_inputs():
     return (destination, transport, starpreview, vehiclepreview)
 
 def calculate_the_journey_time(destination, transport):
-    travel_hour = StarSystem.star_data[starpreview[int(destination)]]['distance_ly'] * Constants.one_lightyear_km/TravelVehicle.vehicle_dict[vehiclepreview[int(transport)]]['Speed (km/h)']
+    travel_hour = StarSystem.star_data [ starpreview [ int(destination) ] ] [ 'distance_ly' ] * Constants.one_lightyear_km / TravelVehicle.vehicle_dict [ vehiclepreview [ int(transport) ] ][ 'Speed (km/h)' ]
     return travel_hour
 
 if __name__ =='__main__':

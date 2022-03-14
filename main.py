@@ -1,19 +1,19 @@
 import json
 
-class Constants():
+class Constants:
     one_lightyear_km = float(9.46) * pow(10, 12)
     Mile_to_Kilo = float(1.60934)
     Kilo_to_Mile = float(0.621371)
 
-class StarSystem():
+class StarSystem:
     with open('list of stars.json', 'r') as json_s:
         star_data = json.load(json_s)
 
-class TravelVehicle():
+class TravelVehicle:
     with open('list of vehicles.json', 'r') as json_v:
         vehicle_dict = json.load(json_v)
 
-class DataViewer():
+class DataViewer:
     def show_all_stars():
         stars = StarSystem.star_data.keys()
         i = 0

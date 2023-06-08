@@ -43,7 +43,7 @@ def take_user_inputs():
 
 def calculate_the_journey_time(destination, transport):
     return StarSystem.star_data [ starpreview [ int(destination) ] ] [ 'distance_ly' ] * Constants.one_lightyear_km / TravelVehicle.vehicle_dict [ vehiclepreview [ int(transport) ] ][ 'Speed (km/h)' ]
-    
+
 
 if __name__ =='__main__':
     destination, transport, starpreview, vehiclepreview = take_user_inputs()
